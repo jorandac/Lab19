@@ -1,0 +1,125 @@
+JoRanda Chapman
+
+1.  SELECT * FROM   customers; 
+
+ 
+
+2. SELECT DISTINCT country FROM customers; 
+
+ 
+
+ 
+
+3. SELECT * FROM customers WHERE CustomerID LIKE 'BL%'; 
+
+ 
+
+ 
+
+4. SELECT * FROM orders LIMIT 100; 
+
+ 
+
+ 
+
+5. SELECT * FROM customers WHERE PostalCode = ‘1010’ OR PostalCode = 3012 OR PostalCode = 12209 OR PostalCode = 05023; 
+
+ 
+
+ 
+
+6. SELECT * FROM orders WHERE ShipRegion IS NOT NULL; 
+
+ 
+
+ 
+
+7. SELECT * FROM customers ORDER BY Country, city; 
+
+ 
+
+ 
+
+8. INSERT INTO `customers`(`CompanyName`, `ContactName`) VALUES (Obasi Solutions', 'JoRanda Chapman'); 
+
+ 
+
+ 
+
+9.  
+
+UPDATE orders 
+
+SET ShipRegion= 'EuroZone' 
+
+WHERE ShipCountry= 'France'; 
+
+ 
+
+ 
+
+10. DELETE FROM `order details` WHERE `Quantity` = 1; 
+
+ 
+
+ 
+
+11. SELECT MIN(Quantity), MAX(Quantity), AVG(Quantity) FROM `order details`; 
+
+ 
+
+ 
+
+12. SELECT MIN(Quantity), MAX(Quantity), AVG(Quantity) FROM `order details` 
+
+GROUP BY OrderID; 
+
+ 
+
+ 
+
+13. SELECT * `CustomerID` FROM orders WHERE `OrderID` = 10290; 
+
+ 
+
+ 
+
+14.  
+
+SELECT orders.OrderDate  
+
+FROM orders  
+
+INNER JOIN customers ON orders.customerID=customers.CustomerID; 
+
+ 
+
+ 
+
+SELECT orders.OrderDate  
+
+FROM orders  
+
+LEFT JOIN customers ON orders.customerID=customers.CustomerID; 
+
+ 
+
+ 
+
+SELECT orders.OrderDate  
+
+FROM orders  
+
+RIGHT JOIN customers ON orders.customerID=customers.CustomerID; 
+
+ 
+
+ 
+
+15. SELECT `FirstName` FROM employees WHERE `ReportsTo` IS NULL; 
+
+ 
+
+ 
+
+16. SELECT `FirstName` FROM employees WHERE `ReportsTo` = (SELECT EmployeeID FROM        employees WHERE FirstName = 'Andrew');
